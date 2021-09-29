@@ -1,13 +1,15 @@
 <template>
   <div id="app">
     <header>
-      <div class="logo">
-        <img src="./assets/logo.png" alt="">
-      </div>
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>|
-      <router-link to="/contact">Contact</router-link>
+    <div class="wrapper">
+       <div class="logo">
+          <img src="./assets/logo.png" alt="">
+       </div>
+       <div id="nav">
+          <router-link to="/">Home</router-link> |
+          <router-link to="/about">About</router-link>|
+          <router-link to="/contact">Contact</router-link>
+       </div>
     </div>
 
 
@@ -30,9 +32,18 @@
   text-align: center;
   color: #2c3e50;
 }
+.wrapper
+{
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
 #nav {
   padding: 30px;
+}
+header
+{
+  display: flex;
 }
 
 #nav a {
