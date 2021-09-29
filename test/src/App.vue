@@ -41,9 +41,15 @@
 #nav {
   padding: 30px;
 }
-header
+header .wrapper
 {
   display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.logo>img
+{
+  height: 50px;
 }
 
 #nav a {
