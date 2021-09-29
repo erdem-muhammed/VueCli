@@ -1,11 +1,24 @@
 <template>
   <div id="app">
+    <header>
+      <div class="logo">
+        <img src="./assets/logo.png" alt="">
+      </div>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>|
       <router-link to="/contact">Contact</router-link>
     </div>
-    <router-view/>
+
+
+    </header>
+    <main>
+      <router-view/>
+    </main>
+
+    <footer>
+      Copyright Facebook © 2021
+    </footer>
   </div>
 </template>
 
