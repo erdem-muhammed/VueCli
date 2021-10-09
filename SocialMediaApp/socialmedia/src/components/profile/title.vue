@@ -1,7 +1,7 @@
 <template>
     <div>
-        <h3>First Name-Surname</h3>
-        <span>Username</span>
+        <h3> {{ fullname }}</h3>
+        <span>{{ username }}</span>
     </div>
 </template>
 <script>
