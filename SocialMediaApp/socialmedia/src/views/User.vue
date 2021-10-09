@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="wrapper">
         <div class="top">
             <Photo />
             <Title />
@@ -25,5 +25,8 @@ export default
 </script>
 
 <style scoped>
-
+.top
+{
+    display: flex;
+}
 </style>
