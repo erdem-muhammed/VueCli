@@ -4,6 +4,25 @@
         <span>Username</span>
     </div>
 </template>
+<script>
+export default
+{
+    props:
+    {
+        fullname:
+        {
+            type: String,
+            required: true
+        },
+        username:
+        {
+            type: String,
+            required: true
+        }
+    }
+}
+</script>
+
 
 <style scoped>
 div
