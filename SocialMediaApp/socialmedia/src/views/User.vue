@@ -2,7 +2,7 @@
     <div class="wrapper">
         <div class="top">
             <Photo />
-            <Title />
+            <Title :username= "$route.params.username" :fullname="fullname" />
         </div>
             <Posts />
     </div>
@@ -17,7 +17,7 @@ const users =
     { id: 2, username: "serios_sam", fullname: "Sam Schmitz", email: "user@gmail.com"},
     { id: 3, username: "Johnny_Bravo", fullname: "Johnny Bravo", email: "user@gmail.com"},
     { id: 4, username: "Adler_Tim", fullname: "Tim Adler", email: "user@gmail.com"},
-    { id: 5, username: "Endless", fullname: "Charlotte Krüger", email: "user@gmail.com"}
+    { id: 5, username: "Endless", fullname: "Charlotte Krüger", email: "user@gmail.com"},
 ]
 import Photo from "../components/profile/photo.vue"
 import Title from "../components/profile/title.vue"
@@ -30,10 +30,22 @@ export default
     Photo,
     Title,
     Posts
-  }
+  },
   computed:
   {
-      
+    fullname()
+    {
+        const u = this.$route.params.username;
+        
+        for(let user of users)
+        {
+            if(user.username == u)
+            {
+                return user.fullname;
+            }
+        }
+        return "(user not found)";
+    }
   }
 } 
 </script>
