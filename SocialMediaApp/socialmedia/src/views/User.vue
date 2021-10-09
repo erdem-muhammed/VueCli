@@ -28,5 +28,6 @@ export default
 .top
 {
     display: flex;
+    margin-bottom: 35px;
 }
 </style>
