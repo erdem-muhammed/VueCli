@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="text">
-            Contributions
+            Contributions 
         </div>
         <div class="postContainer">
             asdknbasjd
