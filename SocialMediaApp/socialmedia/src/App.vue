@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <div id="nav" class="wrapper">
-      <router-link to="/">Home</router-link>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/user/max_muster40">Max Muster's Profil visit</router-link>
     </div>
     <router-view/>
   </div>
