@@ -8,6 +8,15 @@
 </template>
 
 <style>
+*{
+  box-sizing: border-box;
+  font-family: "segou ui";
+}
+.wrapper
+{
+  max-width: 900px;
+  margin: 0 auto;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
