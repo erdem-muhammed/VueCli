@@ -27,6 +27,12 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+    <h3>Login / Register</h3>
+    <ul>
+      <li>
+         <router-link to="/User">Login</router-link>
+      </li>
+    </ul>
   </div>
 </template>
 
