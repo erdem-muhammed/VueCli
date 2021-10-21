@@ -94,6 +94,8 @@ export default {
         add(productname, price)
         {
             this.cart.push({ name:productname, price:price})
+
+            Cookies.set("cart", JSON.stringify(this.cart));
         }
     }
 }
