@@ -16,14 +16,18 @@
            Welcome {{ Name }}
 
            <div class="products">
-               <button></button>
-               <button></button>
-               <button></button>
+               <button @click="add('iphone 5', 300)">Iphone 5 - 300€</button>
+               <button @click="add('iphone 10', 1000)">Iphone 10 - 1000€</button>
+               <button @click="add('iphone 8', 800)">Iphone 7 - 800€</button>
            </div>
 
            <div class="shoppingCart">
                <h3>Cart</h3>
-               
+               <ul>
+                   <li>
+
+                   </li>
+               </ul>
            </div>
        </div>
 
@@ -133,6 +137,10 @@ export default {
      .report.hidden
     {
         opacity: 0;
+    }
+    .products
+    {
+        margin-top: 30px;
     }
 
 </style>
