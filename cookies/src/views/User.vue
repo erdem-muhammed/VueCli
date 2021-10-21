@@ -36,4 +36,23 @@
     border-bottom: 1px solid #aaa;
     outline: none;
 }
+.loginContainer>button
+{
+    margin-top: 10px;
+    border: none;
+    padding: 12px;
+    outline: none;
+    background-color: #111;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.loginContainer>button:hover
+{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    font-weight: bolder;
+}
 </style>
