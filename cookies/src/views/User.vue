@@ -24,9 +24,9 @@
            <div class="shoppingCart">
                <h3>Cart</h3>
                <ul>
-                   <li>
-
-                   </li>
+                   <li v-for="p in cart" :key="p">
+                       {{ p.name }} - {{ p.price }} 
+                    </li>
                </ul>
            </div>
        </div>
@@ -48,6 +48,7 @@ export default {
             name: "",
             report: "Invalid login data! Please try again.",
             report_class: "report hidden",
+            cart: []
         }
     },
     methods:
@@ -67,6 +68,10 @@ export default {
                 
                 setTimeout(() => { this.report_class = "report hidden"}, 3000)
             }
+        },
+        add(productname, price)
+        {
+            this.cart.push({ name:productname, price:price})
         }
     }
 }
