@@ -21,4 +21,11 @@
 {
     margin: 0 0 15px 0;
 }
+.loginContainer
+{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
 </style>
