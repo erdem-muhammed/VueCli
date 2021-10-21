@@ -13,7 +13,7 @@
        </div> 
 
        <div v-else-if="step==2">
-           Welcome {{ Name }}
+           Welcome {{ name }}
 
            <div class="products">
                <button @click="add('iphone 5', 300)">Iphone 5 - 300€</button>
@@ -67,7 +67,7 @@ export default {
             uName: "",
             pass: "",
             step: 1,
-            name: "",
+            name: "ERDEM",
             report: "Invalid login data! Please try again.",
             report_class: "report hidden",
             cart: []
