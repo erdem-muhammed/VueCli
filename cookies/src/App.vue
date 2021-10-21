@@ -12,6 +12,11 @@
   box-sizing: border-box;
   font-family: "segou ui";
 }
+body
+{
+   margin: 0;
+  background-color: #e6e6e6;
+}
 .wrapper
 {
   max-width: 900px;
