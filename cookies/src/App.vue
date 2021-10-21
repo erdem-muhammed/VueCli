@@ -22,6 +22,12 @@ body
   max-width: 900px;
   margin: 0 auto;
 }
+.container
+{
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
