@@ -28,4 +28,12 @@
     flex-direction: column;
     margin: 0 auto;
 }
+.loginContainer>input
+{
+    margin-bottom: 15px;
+    padding: 8px 12px;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    outline: none;
+}
 </style>
