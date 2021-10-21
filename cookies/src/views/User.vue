@@ -54,6 +54,13 @@ export default {
             }
         }
     },
+    mounted()
+    {
+        if(this.step == 1)
+        {
+            document.getElementById("uNAme").focus();
+        }
+    },
     data()
     {
         return{
