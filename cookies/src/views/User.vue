@@ -39,6 +39,21 @@
 // eslint-disable-next-line no-unused-vars
 import Cookies from 'js-cookie';
 export default {
+    created()
+    {
+        if(Cookies.get("logged_in") == "1")
+        {
+            this.step = 2;
+            if(Cookies.get("cart"))
+            {
+                const list = JSON.parse(Cookies.get("cart"));
+                for(let p of list)
+                {
+                    this.cart.push(p);
+                }
+            }
+        }
+    },
     data()
     {
         return{
