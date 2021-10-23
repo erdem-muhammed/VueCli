@@ -2,7 +2,7 @@
     <div class="box">
         <div class="products">
             <h4>PRoducts</h4>
-            <div class="loading"></div>
+            <div class="loading" :style="'display: ' + loading_disp"></div>
             <button v-for="p in products" :key="p.id" @click="addToCart(p)">
                 {{ p.name }}- {{ p.price}}
             </button>
@@ -51,7 +51,7 @@ export default {
     })
     .finally(() =>
     {
-    
+        this.loading_disp = "none";
     });
     },
     data()
