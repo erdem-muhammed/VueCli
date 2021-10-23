@@ -63,7 +63,7 @@ export default {
             this.btn_class = "loading";
             this.btn_disabled = true;
 
-            fetch("http://localhost/login.php?username=" + this.uName + "&passwort=" + this.pass)
+            fetch("http://localhost/login.php?username=" + this.uName + "&password=" + this.pass)
             .then(answer => answer.text())
             .then(answer =>
             {
@@ -72,15 +72,15 @@ export default {
                     Cookies.set("logged_in", "1");
                     this.step = 2;
                 }
-                else if(answer == "0") 
+                /*else if(answer == "0") 
                 {
                     this.report_class = "report";
                     setTimeout(() => { this.report_class = "report hidden"}, 3000)
-                }
-                else
+                }*/
+                /*else
                 {
                     //Server-ERROR
-                }
+                }*/
             })
             .catch(() =>
             {

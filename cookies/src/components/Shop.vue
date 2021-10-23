@@ -30,12 +30,14 @@ export default {
     created()
     {
         if(Cookies.get("cart"))
+       {
         const list = JSON.parse(Cookies.get("cart"));
 
         for(let p of list)
         {
             this.cart.push(p);
         }
+       }
     fetch("http://localhost/products.php")
     .then(response => response.json())
     .then(response =>
