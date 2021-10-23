@@ -2,7 +2,7 @@
     <div class="box">
         <div class="products">
             <h4>PRoducts</h4>
-            <div></div>
+            <div class="loading"></div>
             <button v-for="p in products" :key="p.id" @click="addToCart(p)">
                 {{ p.name }}- {{ p.price}}
             </button>
@@ -18,8 +18,6 @@
              </ul>
         </div>
     </div>
-
-
 
 </template>
 
@@ -85,6 +83,46 @@ export default {
     {
         width: 50%;
     }
-    .
+    .products>button
+    {
+        margin: 10px;
+    }
+    .box ul
+    {
+        text-align: left;
+    }
+    .loading
+    {
+        margin-top: 10px;
+        position: relative;
+    }
+    .loading::after
+    {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        border: 4px solid transparent;
+        border-top-color: crimson;
+        border-radius: 50%;
+        animation: btn-animation 1s ease infinite;
+    }
+     @keyframes btn-animation
+    {
+        from
+        {
+            transform: rotate(0turn);
+        }
+
+        to
+        {
+            transform: rotate(1turn);
+        }
+    }
 
 </style>
