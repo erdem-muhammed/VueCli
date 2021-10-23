@@ -3,7 +3,7 @@
         <div class="products">
             <h4>PRoducts</h4>
             <div></div>
-            <button>
+            <button v-for="p in products" :key="p.id" @click="addToCart(p)">
                 {{ p.name }}- {{ p.price}}
             </button>
             {{ report_text }}
@@ -12,7 +12,7 @@
         <div class="cart">
              <h4>CART</h4>
              <ul>
-                 <li>
+                 <li v-for="p in cart" :key="p.id">
                      {{ p.name }} - {{ p.price }}
                  </li>
              </ul>
@@ -62,6 +62,14 @@ export default {
             products: [],
             cart: [],
             error_text: ""
+        }
+    },
+    methods:
+    {
+        addToCart(product)
+        {
+            this.cart.push(product);
+            Cookies.set("cart", JSON.stringify(this.cart));
         }
     }
 }
