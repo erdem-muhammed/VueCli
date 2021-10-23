@@ -29,7 +29,41 @@
 // eslint-disable-next-line no-unused-vars
 import Cookies from "js-cookie";
 export default {
-    
+    created()
+    {
+        if(Cookies.get("cart"))
+        const list = JSON.parse(Cookies.get("cart"));
+
+        for(let p of list)
+        {
+            this.cart.push(p);
+        }
+    fetch("http://localhost/products.php")
+    .then(response => response.json())
+    .then(response =>
+    {
+        for(let p of response)
+        {
+            this.products.push(p);
+        }
+    })
+    .catch(() =>
+    {
+        this.error_text = "Error"
+    })
+    .finally(() =>
+    {
+        
+    });
+    },
+    data()
+    {
+        return {
+            products: [],
+            cart: [],
+            error_text: ""
+        }
+    }
 }
 </script>
 
