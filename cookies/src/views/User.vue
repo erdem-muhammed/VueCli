@@ -5,7 +5,9 @@
         <div class="loginContainer">
             <input placeholder="Username" id="uName" v-model="uName">
             <input placeholder="Password" id="pw" type="password" v-model="pass">
-            <button @click="login">Login</button>
+            <button @click="login" :class"btn_class" :disabled="btn_disabled">
+                <span>Login</span>
+            </button>
             <div :class="report_class">
                 {{ report }}
             </div>
@@ -13,24 +15,8 @@
        </div> 
 
        <div v-else-if="step==2">
-           Welcome {{ name }}
-
-           <div class="products">
-               <button @click="add('iphone 5', 300)">Iphone 5 - 300€</button>
-               <button @click="add('iphone 10', 1000)">Iphone 10 - 1000€</button>
-               <button @click="add('iphone 8', 800)">Iphone 7 - 800€</button>
-           </div>
-
-           <div class="shoppingCart">
-               <h3>Cart</h3>
-               <ul>
-                   <li v-for="p in cart" :key="p">
-                       {{ p.name }} - {{ p.price }} 
-                    </li>
-               </ul>
-           </div>
+            <Shop />
        </div>
-
     </div>
 </template>
 
@@ -45,24 +31,12 @@ export default {
     created()
     {
         if(Cookies.get("logged_in") == "1")
-        {
             this.step = 2;
-            if(Cookies.get("cart"))
-            {
-                const list = JSON.parse(Cookies.get("cart"));
-                for(let p of list)
-                {
-                    this.cart.push(p);
-                }
-            }
-        }
     },
     mounted()
     {
         if(this.step == 1)
-        {
             document.getElementById("uNAme").focus();
-        }
     },
     components:
     {
@@ -94,10 +68,10 @@ export default {
                     Cookies.set("logged_in", "1");
                     this.step = 2;
                 }
-                else if(answer == "0")
+                else if (answer == "0") 
                 {
-                this.report_class = "report";
-                setTimeout(() => { this.report_class = "report hidden"}, 3000)
+                    this.report_class = "report";
+                    setTimeout(() => { this.report_class = "report hidden"}, 3000)
                 }
                 else
                 {
@@ -112,6 +86,7 @@ export default {
             {
                 
             });  
+        }
     }
 }
 </script>
@@ -162,31 +137,58 @@ export default {
     font-weight: bolder;
 }
 
- .report
-    {
-        background-color: white;
-        border-radius: 8px;
-        padding: 12px;
-        -webkit-box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.15); 
-        box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.15);
-        font-size: 0.8em;
+.report
+{
+    background-color: white;
+    border-radius: 8px;
+    padding: 12px;
+    -webkit-box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.15); 
+    box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.15);
+    font-size: 0.8em;
 
-        position: absolute;
-        bottom: -60px;
-        opacity: 1;
+    position: absolute;
+    bottom: -60px;
+    opacity: 1;
 
-        transition: opacity 0.5s;
-        border-left: 11px solid rgb(187, 0, 0);
-    }
-     .report.hidden
-    {
-        opacity: 0;
-    }
-    .products
-    {
-        margin-top: 30px;
-    }
+    transition: opacity 0.5s;
+    border-left: 11px solid rgb(187, 0, 0);
+}
+.report.hidden
+{
+    opacity: 0;
+}
+.loading>span
+{
+    opacity: 0;
+}
+.loading::after
+{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 4px solid transparent;
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: btn-animation 1s ease infinite;
+}
+@keyframes btn-animation
+{
+  from
+  {
+    transform: rotate(0turn);
+  }
 
+  to
+  {
+    transform: rotate(1turn);
+  }
+}
 </style>
 
 
