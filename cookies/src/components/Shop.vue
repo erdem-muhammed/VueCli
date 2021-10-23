@@ -1,10 +1,13 @@
 <template>
     <div class="box">
         <div class="products">
-
+            <h4>PRoducts</h4>
+            <div></div>
+            <button>
+                {{ p.name }}- {{ p.price}}
+            </button>
+            {{ report_text }}
         </div>
-
-
 
         <div class="cart">
              <h4>CART</h4>
@@ -29,3 +32,17 @@ export default {
     
 }
 </script>
+
+
+<style scoped>
+    .box
+    {
+        display: flex;
+    }
+    .box>div
+    {
+        width: 50%;
+    }
+    .
+
+</style>
