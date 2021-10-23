@@ -64,6 +64,10 @@ export default {
             document.getElementById("uNAme").focus();
         }
     },
+    components:
+    {
+        Shop
+    },
     data()
     {
         return{
@@ -80,26 +84,34 @@ export default {
     {
         login()
         {
-            if(this.uName == "admin" && this.pass == "123456")
+            
+            fetch("http://localhost/login.php?username=" + this.uName + "&passwort=" + this.pass)
+            .then(answer => answer.text())
+            .then(answer =>
             {
-                Cookies.set("logged_in", "1");
-                this.step = 2;
-            }
-            else
-            {
+                if(answer == "1");
+                {
+                    Cookies.set("logged_in", "1");
+                    this.step = 2;
+                }
+                else if(answer == "0")
+                {
                 this.report_class = "report";
-                this.pass = "";
-                document.getElementById("pw").focus();
-                
                 setTimeout(() => { this.report_class = "report hidden"}, 3000)
-            }
-        },
-        add(productname, price)
-        {
-            this.cart.push({ name:productname, price:price})
+                }
+                else
+                {
+                //Server-ERROR
+                }
+            })
+            .catch(() =>
+            {
 
-            Cookies.set("cart", JSON.stringify(this.cart));
-        }
+            })
+            .finally(() =>
+            {
+                
+            });  
     }
 }
 </script>
