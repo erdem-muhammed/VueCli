@@ -51,7 +51,9 @@ export default {
             name: "ERDEM",
             report: "Invalid login data! Please try again.",
             report_class: "report hidden",
-            cart: []
+            btn_class: "",
+            btn_text_op: 1,
+            btn_disabled: false
         }
     },
     methods:
@@ -84,7 +86,8 @@ export default {
             })
             .finally(() =>
             {
-                
+                this.btn_class = "";
+                this.btn_disabled = false;
             });  
         }
     }
