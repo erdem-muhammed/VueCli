@@ -10,3 +10,12 @@
         <h4>CART</h4>
     </div>
 </template>
+
+
+
+<script>
+import Cookies from "js-cookie";
+export default {
+    
+}
+</script>
