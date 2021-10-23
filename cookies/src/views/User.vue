@@ -63,7 +63,7 @@ export default {
             this.btn_class = "loading";
             this.btn_disabled = true;
 
-            fetch("http://localhost/login.php?username=" + this.uName + "&password=" + this.pass)
+            fetch("http://localhost/backend(Login-Fetch)/login.php?username=" + this.uName + "&password=" + this.pass)
             .then(answer => answer.text())
             .then(answer =>
             {

@@ -1,7 +1,7 @@
 <template>
     <div class="box">
         <div class="products">
-            <h4>PRoducts</h4>
+            <h4>Products</h4>
             <div class="loading" :style="'display: ' + loading_disp"></div>
             <button v-for="p in products" :key="p.id" @click="addToCart(p)">
                 {{ p.name }}- {{ p.price}}
