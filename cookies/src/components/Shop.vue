@@ -8,6 +8,11 @@
 
         <div class="cart">
              <h4>CART</h4>
+             <ul>
+                 <li>
+                     {{ p.name }} - {{ p.price }}
+                 </li>
+             </ul>
         </div>
     </div>
 
