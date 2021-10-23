@@ -3,17 +3,22 @@
         <div class="products">
 
         </div>
+
+
+
+        <div class="cart">
+             <h4>CART</h4>
+        </div>
     </div>
 
 
-    <div class="cart">
-        <h4>CART</h4>
-    </div>
+
 </template>
 
 
 
 <script>
+// eslint-disable-next-line no-unused-vars
 import Cookies from "js-cookie";
 export default {
     

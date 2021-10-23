@@ -38,6 +38,9 @@
 <script>
 // eslint-disable-next-line no-unused-vars
 import Cookies from 'js-cookie';
+// eslint-disable-next-line no-unused-vars
+import Shop from "../components/Shop.vue";
+
 export default {
     created()
     {
