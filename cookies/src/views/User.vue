@@ -5,7 +5,7 @@
         <div class="loginContainer">
             <input placeholder="Username" id="uName" v-model="uName">
             <input placeholder="Password" id="pw" type="password" v-model="pass">
-            <button @click="login" :class"btn_class" :disabled="btn_disabled">
+            <button @click="login" :class="btn_class" :disabled="btn_disabled">
                 <span>Login</span>
             </button>
             <div :class="report_class">
@@ -60,7 +60,9 @@ export default {
     {
         login()
         {
-            
+            this.btn_class = "loading";
+            this.btn_disabled = true;
+
             fetch("http://localhost/login.php?username=" + this.uName + "&passwort=" + this.pass)
             .then(answer => answer.text())
             .then(answer =>
@@ -77,7 +79,7 @@ export default {
                 }
                 else
                 {
-                //Server-ERROR
+                    //Server-ERROR
                 }
             })
             .catch(() =>
