@@ -38,7 +38,7 @@ export default {
             this.cart.push(p);
         }
        }
-    fetch("http://localhost/products.php")
+    fetch("http://localhost/backend(Login-Fetch)/products.php")
     .then(response => response.json())
     .then(response =>
     {
