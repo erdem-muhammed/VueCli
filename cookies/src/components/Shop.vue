@@ -51,7 +51,7 @@ export default {
     })
     .finally(() =>
     {
-        
+    
     });
     },
     data()
@@ -59,7 +59,8 @@ export default {
         return {
             products: [],
             cart: [],
-            error_text: ""
+            error_text: "",
+            loading_disp: "block"
         }
     },
     methods:

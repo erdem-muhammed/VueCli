@@ -72,7 +72,7 @@ export default {
                     Cookies.set("logged_in", "1");
                     this.step = 2;
                 }
-                else if (answer == "0") 
+                else if(answer == "0") 
                 {
                     this.report_class = "report";
                     setTimeout(() => { this.report_class = "report hidden"}, 3000)
