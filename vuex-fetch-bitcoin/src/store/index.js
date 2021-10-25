@@ -8,6 +8,10 @@ export default new Vuex.Store({
     bitcoinRate: []
   },
   mutations: {
+    addRate(state, payload)
+    {
+      state.bitcoinRate.push(payload)
+    }
   },
   actions: {
     async initRate(context)
