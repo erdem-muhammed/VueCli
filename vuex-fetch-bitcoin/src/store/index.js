@@ -7,6 +7,21 @@ export default new Vuex.Store({
   state: {
     bitcoinRate: []
   },
+  getters:
+  {
+    euroRate(state)
+    {
+      return state.bitcoinRate.find(el => el.name == "EUR")
+    },
+    dollarRate(state)
+    {
+      return state.bitcoinRate.find(el => el.name == "USD")
+    },
+    poundRate(state)
+    {
+      return state.bitcoinRate.find(el => el.name == "GPB")
+    }
+  },
   mutations: {
     addRate(state, payload)
     {
