@@ -50,10 +50,10 @@ export default new Vuex.Store({
       let response = await fetch("https://api.coindesk.com/v1/bpi/currentprice.json");
       let result = await response.json();
 
-      let i = 0;
+      let i = 0; 
       for(let a in result.bpi)
       {
-        context.commit("updateRate", {id: 1, rate: result.bpi[a].rate_float})
+        context.commit("updateRate", {id: i, rate: result.bpi[a].rate_float})
         i++;
       }
     }
