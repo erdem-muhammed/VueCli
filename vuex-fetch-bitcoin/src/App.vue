@@ -20,7 +20,8 @@ export default {
   },
 computed:{
   ...mapState(["bitcoinRate"]),
-  ...mapGetters(["euroRate", "dollarRate", "poundRate"])}
+  ...mapGetters(["euroRate", "dollarRate", "poundRate"])
+  }
 }
 </script>
 
