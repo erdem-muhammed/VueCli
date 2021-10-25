@@ -2,7 +2,7 @@
   <div id="app">
   Current Bitcoin Rate:
   <ul>
-    <li>
+    <li v-for="c in bitcoinRate" :key="c.id">
       {{ c.rate }}  {{ c.name }}
     </li>
   </ul>
