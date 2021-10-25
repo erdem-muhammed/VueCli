@@ -41,7 +41,5 @@ export default new Vuex.Store({
           i++;
       }
     }
-  },
-  modules: {
   }
 })
