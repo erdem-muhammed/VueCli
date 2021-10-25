@@ -27,7 +27,10 @@ export default new Vuex.Store({
     {
       state.bitcoinRate.push(payload)
     },
-    
+    updateRate(state, payload)
+    {
+      state.bitcoinRate.splice(payload.id, 1, {id: payload.id, name: state.bitcoinRate[payload.id].name, rate: payload.rate})
+    }
   },
   actions: {
     async initRate(context)
