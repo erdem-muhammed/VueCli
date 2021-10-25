@@ -7,7 +7,7 @@
     </li>
   </ul>
 
-  Current EUR: <span> {{ euroRate.rate }} </span>
+  Current EUR: <span v-if="euroRate"> {{ euroRate.rate }} </span>
   </div>
 </template>
 
@@ -17,6 +17,10 @@ export default {
   created()
   {
     this.$store.dispatch("initRate");
+    setInterval(() =>
+    {
+      this.$store.dispatch("updateRate");
+    }, 6000)
   },
 computed:{
   ...mapState(["bitcoinRate"]),
