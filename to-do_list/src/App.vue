@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-      <topMenu></topMenu>
-
+    <topMenu></topMenu>
+    <div class="wrapper main">
+         <h1>To-Do List</h1>  
+    </div>
     <router-view/>
   </div>
 </template>
@@ -30,5 +32,18 @@ body{
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
 }
-
+.wrapper
+{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.main{
+  padding: 50px 0;
+}
+.main h1::after{
+  content: "";
+  display: block;
+  border: 2px solid #009ee3;
+  width: 120px;
+}
 </style>
