@@ -1,10 +1,20 @@
 <template>
   <div id="app">
- <h1>
- </h1>
+  
+
     <router-view/>
   </div>
 </template>
+
+<script>
+// eslint-disable-next-line no-unused-vars
+import header from "./components/header.vue";
+export default {
+
+}
+
+</script>
+
 
 <style>
 #app {
