@@ -34,6 +34,17 @@ header
 {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+#nav a
+{
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+#nav a.router-link-exact-active {
+  border-bottom: 1px solid  #009ee3;
 }
 
 </style>
