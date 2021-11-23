@@ -28,5 +28,12 @@ export default {
     border-radius: 8px;
     padding: 30px 50px;
 }
-
+.container .inputs input{
+    width: 400px;
+    margin-right: 100px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 2px solid #aaa;
+    outline: none;
+}
 </style>
