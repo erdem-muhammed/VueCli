@@ -2,7 +2,7 @@
     <div class="container wrapper">
         <div class="inputs">
             <input type="text" placeholder="Enter a task">
-            <button>ADD</button>
+            <button>Add</button>
         </div>
         <div class="toDos">
             <ul>
@@ -30,10 +30,19 @@ export default {
 }
 .container .inputs input{
     width: 400px;
-    margin-right: 100px;
+    margin-right: 50px;
     padding: 12px 20px;
     border-radius: 8px;
     border: 2px solid #aaa;
     outline: none;
+}
+.container .inputs button
+{
+    padding: 12px 56px;
+    border-radius: 8px;
+    border: none;
+    background-color: #009ee3;
+    color: white;
+    font-weight: bold;
 }
 </style>
