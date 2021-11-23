@@ -29,7 +29,7 @@ export default {
   box-sizing: border-box;
 }
 body{
-  height: 100vh;
+  height: 120vh;
   margin: 0;
   background-color: rgb(221, 221, 221);
 }
