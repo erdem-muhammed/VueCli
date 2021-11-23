@@ -28,6 +28,7 @@ export default {
 body{
   height: 100vh;
   margin: 0;
+  background-color: rgb(221, 221, 221);
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
