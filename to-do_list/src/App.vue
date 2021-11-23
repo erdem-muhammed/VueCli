@@ -4,6 +4,7 @@
     <div class="wrapper main">
          <h1>To-Do List</h1>  
     </div>
+    <toDo></toDo>
     <router-view/>
   </div>
 </template>
@@ -11,10 +12,12 @@
 <script>
 // eslint-disable-next-line no-unused-vars
 import topMenu from "./components/header.vue";
+import toDo from "./components/toDo.vue";
 export default {
   name: 'app',
   components: {
-    topMenu
+    topMenu,
+    toDo
   }
 };
 

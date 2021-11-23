@@ -9,7 +9,7 @@ const routes = [
     name: 'shoppingList',
     
     component: () => import( '../views/shoppingList.vue')
-  }
+  },
 ]
 
 const router = new VueRouter({
