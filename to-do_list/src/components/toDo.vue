@@ -25,6 +25,11 @@ export default {
         add()
         {
             let input = document.getElementById("taskInput");
+            if(input.value != "")
+            {
+                this.items.push(input.value);
+                input.value = "";
+            }
         }
     }
 }
