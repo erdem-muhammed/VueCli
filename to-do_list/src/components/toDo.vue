@@ -7,7 +7,9 @@
         </div>
         <div class="list">
             <ul>
-                <li></li>
+                <li v-for="(item, index) in items">
+                    {{ item }}
+                </li>
             </ul>
         </div>
 
