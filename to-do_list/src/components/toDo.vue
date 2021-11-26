@@ -1,8 +1,8 @@
 <template>
     <div class="container wrapper">
         <div class="inputs">
-            <input type="text" placeholder="Enter a task">
-            <button>Add</button>
+            <input type="text" id="taskInput" placeholder="Enter a task">
+            <button @click="add">Add</button>
         </div>
         <div class="toDos">
             <ul>
@@ -16,7 +16,11 @@
 
 <script>
 export default {
-    
+    data() {
+        return{
+        items: [],
+        }
+    }
 }
 </script>
 
