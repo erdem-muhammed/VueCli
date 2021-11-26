@@ -20,6 +20,12 @@ export default {
         return{
         items: [],
         }
+    },
+    methods: {
+        add()
+        {
+            let input = document.getElementById("taskInput");
+        }
     }
 }
 </script>
