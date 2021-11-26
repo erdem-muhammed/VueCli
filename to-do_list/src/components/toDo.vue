@@ -33,7 +33,7 @@ export default {
             }
             else
             {
-                
+                document.getElementById("info").innerHTML = "Please enter a task!!"
             }
         }
     }
@@ -65,5 +65,11 @@ export default {
     color: white;
     font-weight: bold;
     cursor: pointer;
+}
+#info
+{
+    margin-top: 10px;
+    margin-left: 10px;
+    color: red;
 }
 </style>
