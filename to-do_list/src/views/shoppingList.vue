@@ -6,10 +6,14 @@
 </template>
 
 <script>
-// eslint-disable-next-line no-unused-vars
 import topMenu from "../components/header.vue";
 import toDo from "../components/toDo.vue";
 export default {
+    name: 'shoppingList',
+    components: {
+        topMenu,
+        toDo
+    }
     
 }
-</script>ToDo
+</script>
