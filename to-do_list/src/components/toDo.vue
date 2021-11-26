@@ -3,7 +3,7 @@
         <div class="inputs">
             <input type="text" id="taskInput" placeholder="Enter a task">
             <button @click="add">Add</button>
-            <div id="info"></div>
+            <div id="warning"></div>
         </div>
         <div class="list">
             <ul>
@@ -26,16 +26,16 @@ export default {
     },
     methods: {
         add()
-        {
+        {//new task push to items array 
             let input = document.getElementById("taskInput");
             if(input.value != "")
             {
                 this.items.push(input.value);
                 input.value = "";
             }
-            else
+            else//if input.value is empty, then warning must be showed!!
             {
-                document.getElementById("info").innerHTML = "Please enter a task!!"
+                document.getElementById("warning").innerHTML = "Please enter a task!!"
             }
         }
     }
@@ -68,7 +68,7 @@ export default {
     font-weight: bold;
     cursor: pointer;
 }
-#info
+#warning
 {
     margin-top: 10px;
     margin-left: 10px;
