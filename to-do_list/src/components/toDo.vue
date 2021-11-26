@@ -3,8 +3,9 @@
         <div class="inputs">
             <input type="text" id="taskInput" placeholder="Enter a task">
             <button @click="add">Add</button>
+            <div id="info"></div>
         </div>
-        <div class="toDos">
+        <div class="list">
             <ul>
                 <li></li>
             </ul>
@@ -29,6 +30,10 @@ export default {
             {
                 this.items.push(input.value);
                 input.value = "";
+            }
+            else
+            {
+                
             }
         }
     }
