@@ -41,8 +41,10 @@ export default {
                 input.value = "";
             }
             else//if input.value is empty, then warning must be showed!!
-            {
-                document.getElementById("warning").innerHTML = "Please enter a task!!"
+            { 
+                document.getElementById("warning").innerHTML = "Please enter a task!!";
+                setTimeout(() =>
+                {document.getElementById("warning").innerHTML = ""}, 4000);
             }
         },
         erase(index) //delete the item from the list

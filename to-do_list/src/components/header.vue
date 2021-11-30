@@ -6,7 +6,7 @@
                     <h1>My Website</h1>
                 </div>
                 <div id="nav">
-                    <router-link to="/home">To-Do's</router-link> 
+                    <router-link to="/">To-Do's</router-link> 
                     <router-link to="/shoppingList">Shopping List</router-link>
                 </div>
             </div>
