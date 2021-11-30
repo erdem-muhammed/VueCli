@@ -1,7 +1,11 @@
 <template>
-<div class="wrapper main">
+<div>
     <topMenu></topMenu>
+<div class="wrapper main">
+     <h1>Shopping List</h1>  
     <toDo></toDo>
+</div>
+
 </div>
 </template>
 

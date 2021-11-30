@@ -7,7 +7,7 @@
         </div>
         <div class="list">
             <ul>
-                <li v-for="(item, index) in items" v-bind:key="index">
+                <li v-for="(item, index) in items" v-bind:key="index" @click="erase" :class="{ active: show ===index }">
                     {{ item }}
                 </li>
             </ul>
@@ -37,6 +37,10 @@ export default {
             {
                 document.getElementById("warning").innerHTML = "Please enter a task!!"
             }
+        },
+        erase() //delete the item from the list
+        {
+            
         }
     }
 }
