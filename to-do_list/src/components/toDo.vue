@@ -88,10 +88,14 @@ export default {
 .list ul li
 {
     cursor: pointer;
+    margin-top: 6px;
 }
 .list ul li span
 {
     color: red;
     margin-left: 20px;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
 }
 </style>
