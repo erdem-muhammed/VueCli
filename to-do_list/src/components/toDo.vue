@@ -7,9 +7,14 @@
         </div>
         <div class="list">
             <ul>
-                <li v-for="(item, index) in items" v-bind:key="index" @click="erase"
-                 :class="{ active: show ===index }" >
+                <li v-for="(item, index) in items" v-bind:key="index"
+                 :class="{ active: show ===index }"
+                 @mouseenter="show = index;"
+                 @mouseleave="show = false;" >
                     {{ item }}
+                    <transition name= "fade">
+                        <span v-if="show === index" @click="erase(index)"></span>
+                    </transition>
                 </li>
             </ul>
         </div>
@@ -80,4 +85,5 @@ export default {
     margin-left: 10px;
     color: red;
 }
+
 </style>
