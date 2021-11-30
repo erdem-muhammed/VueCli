@@ -13,7 +13,7 @@
                  @mouseleave="show = false;" >
                     {{ item }}
                     <transition name= "fade">
-                        <span v-if="show === index" @click="erase(index)"></span>
+                        <span v-if="show === index" @click="erase(index)">delete</span>
                     </transition>
                 </li>
             </ul>
@@ -45,9 +45,9 @@ export default {
                 document.getElementById("warning").innerHTML = "Please enter a task!!"
             }
         },
-        erase() //delete the item from the list
+        erase(index) //delete the item from the list
         {
-            
+            this.items.splice(index, 1);
         }
     }
 }
