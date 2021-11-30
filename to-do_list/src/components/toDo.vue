@@ -85,5 +85,13 @@ export default {
     margin-left: 10px;
     color: red;
 }
-
+.list ul li
+{
+    cursor: pointer;
+}
+.list ul li span
+{
+    color: red;
+    margin-left: 20px;
+}
 </style>
