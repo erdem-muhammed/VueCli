@@ -7,7 +7,8 @@
         </div>
         <div class="list">
             <ul>
-                <li v-for="(item, index) in items" v-bind:key="index" @click="erase" :class="{ active: show ===index }">
+                <li v-for="(item, index) in items" v-bind:key="index" @click="erase"
+                 :class="{ active: show ===index }" >
                     {{ item }}
                 </li>
             </ul>
@@ -22,6 +23,7 @@ export default {
     data() {
         return{
         items: [],
+        show: false
         }
     },
     methods: {
